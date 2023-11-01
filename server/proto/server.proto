@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = ".;service";
+
+service serviceServer{
+  rpc sayHi(cliRequest) returns (serResponse) {}
+}
+
+message cliRequest {
+  string requestName = 1;
+}
+
+message serResponse {
+  string responseMsg = 1;
+}
